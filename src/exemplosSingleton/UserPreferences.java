@@ -15,17 +15,20 @@ public class UserPreferences {
     static LocalDateTime now = LocalDateTime.now();
     public static String timestamp = now.toString();
     public static String type = "Operador";
-
+    private static UserPreferences instancia = new UserPreferences();
+    
     private UserPreferences() {
 
     }
 
     public static void getData() {
-
+        
+        
         System.out.println("Usuario: " + username
                 + "\nSenha: " + password
                 + "\nHorário Sessão: " + timestamp
                 + "\nPerfil: " + type
+                + "\nInstancia" + instancia
         );
 
     }
